@@ -1,0 +1,14 @@
+Array
+(
+    [0] => Array
+        (
+            [Student_ID_Number] => 20-2012-788
+            [Last_Name] => VINOYA
+            [First_Name] => LYNDON PAUL
+            [Middle_Initial] => T
+            [Course] => bsit
+            [Address] => 215 Purok Magsaysay Loakan Proper Baguio City
+            [Birthdate] => 2002-05-21
+        )
+
+)
