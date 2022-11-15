@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     if (!empty($_POST)) {
         
         $id = isset($_POST['id']) && !empty($_POST['id']) && $_POST['id'] != 'auto' ? $_POST['id'] : NULL;
-        $studentIdNumber = isset($_POST['studentIdNumber']) ? $_POST['studentIdNumber'] : '';
+        $studentIDNumber = isset($_POST['studentIDNumber']) ? $_POST['studentIDNumber'] : '';
         $lName = isset($_POST['lName']) ? $_POST['lName'] : '';
         $fName = isset($_POST['fName']) ? $_POST['fName'] : '';
         $mInitial = isset($_POST['mInitial']) ? $_POST['mInitial'] : '';
@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
         $birthdate = isset($_POST['birthdate']) ? $_POST['birthdate'] : '';
 
         $stmt = $pdo->prepare('UPDATE idregistration SET id = ?, studentIdNumber = ?, lName = ?, fName = ?, mInitial = ?, course = ?, address = ?, birthdate = ? WHERE id = ?');
-        $stmt->execute([$id, $studentIdNumber, $lName, $fName, $mInitial, $course, $address, $birthdate, $_GET['id']]);
+        $stmt->execute([$id, $studentIDNumber, $lName, $fName, $mInitial, $course, $address, $birthdate, $_GET['id']]);
         $msg = 'Updated Successfully!';
     }
 
@@ -49,7 +49,7 @@ if (isset($_GET['id'])) {
 
         <label for="mInitial">Middle Initial</label>
         <label for="address">Address</label>
-        <input type="text" name="MInitial" maxlength="1" value="<?=$id['mInitial']?>" id="mInitial">
+        <input type="text" name="mInitial" maxlength="1" value="<?=$id['mInitial']?>" id="mInitial">
         <input type="text" name="address" value="<?=$id['address']?> "id="address">
        
         <label for="course">Course</label>
